@@ -12,6 +12,7 @@
   --MainTransition: 300ms;
   --SectionBackground: #ececec;
   --MainLineHeight: 1.5;
+  --BlackColor: #333;
 }
 
 /* Global Rules */
@@ -40,3 +41,42 @@
     width: 1170px;
   }
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Start */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header .container > a {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: var(--MainColor);
+}
+
+header .container > ul {
+  display: flex;
+}
+
+header .container > ul > li a {
+  margin-left: 30px;
+  color: var(--BlackColor);
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+header .container ul li .mega-menu {
+  display: none;
+}
+/* Header End */
