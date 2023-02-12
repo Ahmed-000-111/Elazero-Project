@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --MainColor: #2196f3;
+  --MainAlterColor: #1787e0;
+  --MainTransition: 300ms;
+  --SectionBackground: #ececec;
+  --MainLineHeight: 1.5;
+}
+
+/* Global Rules */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small-Screen Container */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Med-Screen Container */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large-Screen Container */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
