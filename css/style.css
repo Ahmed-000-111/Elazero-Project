@@ -58,6 +58,7 @@ header .container {
   align-items: center;
   /* padding-top: 10px; */
   padding-bottom: 10px;
+  background-color: goldenrod;
 }
 
 header .container > a {
@@ -80,8 +81,7 @@ header .container > ul > li  {
   height: 100%;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  
+  /* overflow: hidden; */
 }
 
 header .container > ul > li a {
@@ -118,7 +118,15 @@ header .container > ul > li a:hover {
   color: var(--MainColor);
 }
 
+header .container > ul > li:last-child {
+  position: relative;
+}
+
 header .container ul li .mega-menu {
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: -700%;
+  display: flex;
+  padding: 30px;
 }
 /* Header End */
