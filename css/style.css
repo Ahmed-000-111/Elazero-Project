@@ -129,4 +129,20 @@ header .container ul li .mega-menu {
   display: flex;
   padding: 30px;
 }
+
+header .container ul li .mega-menu img {
+  margin-right: 80px;
+}
+
+header .container ul li .mega-menu ul:first-of-type {
+  margin-right: 30px;
+}
+
+header .container ul li .mega-menu .col li {
+  color: var(--MainColor);
+  border-bottom: 1px solid #e9e6e6;
+  padding-right: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 /* Header End */
