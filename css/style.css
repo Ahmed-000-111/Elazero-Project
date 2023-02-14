@@ -58,7 +58,7 @@ header .container {
   align-items: center;
   /* padding-top: 10px; */
   padding-bottom: 10px;
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
 }
 
 header .container > a {
@@ -125,24 +125,35 @@ header .container > ul > li:last-child {
 header .container ul li .mega-menu {
   position: absolute;
   top: 100%;
-  left: -700%;
+  left: -100%;
   display: flex;
-  padding: 30px;
+  /* padding: 30px 0; */
+  /* border-bottom: 2px solid var(--MainColor); */
+  /* display: none; */
 }
 
-header .container ul li .mega-menu img {
-  margin-right: 80px;
-}
+/* header .container ul li .mega-menu img {
+  margin-right: 60px;
+} */
 
-header .container ul li .mega-menu ul:first-of-type {
+/* header .container ul li .mega-menu ul:first-of-type {
   margin-right: 30px;
-}
+} */
 
-header .container ul li .mega-menu .col li {
+/* header .container ul li .mega-menu .col li {
   color: var(--MainColor);
   border-bottom: 1px solid #e9e6e6;
   padding-right: 90px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
+} */
+
+/* header .container ul li .mega-menu .col li i {
+  margin-right: 10px;
+} */
+
+/* header .container ul li .mega-menu .col li a {
+  color: var(--MainColor);
+  
+} */
 /* Header End */
