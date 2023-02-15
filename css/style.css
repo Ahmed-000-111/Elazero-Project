@@ -74,14 +74,13 @@ header .container > ul {
 }
 
 header .container > ul > li  {
-  
   text-transform: capitalize;
   font-size: 18px;
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 header .container > ul > li > a {
@@ -124,13 +123,19 @@ header .container > ul > li:last-child {
 
 header .container ul li .mega-menu {
   position: absolute;
-  top: 100%;
+  top: 140%;
   left: -676%;
   display: flex;
   padding: 30px 0;
   border-bottom: 2px solid var(--MainColor);
-  border-top: 1px solid black;
-  /*display: none;*/
+  /* border-top: 1px solid black; */
+  opacity: 0;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+  
 }
 
 header .container ul li .mega-menu img {
@@ -155,5 +160,44 @@ header .container ul li .mega-menu .col li i {
 
 header .container ul li .mega-menu .col li a {
   color: var(--MainColor);
+}
+
+header .container > ul > li:last-child:hover {
+  left: 0;
+  overflow: visible;
+}
+
+header .container > ul > li:last-child:hover > .mega-menu {
+  opacity: 1;
+  top: 100%;
+}
+
+/* Responsiveness Styling */
+@media (max-width: 992px) {
+  header .container ul li .mega-menu img {
+    display: none;
+  }
+  header .container ul li .mega-menu {
+    left: -100%;
+  }
+}
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+  header .container > ul {
+    max-width: 100%;
+  }
+  header .container > ul > li > a {
+    font-size: 14px;
+    padding: 10px;
+  }
+  header .container ul li .mega-menu img {
+    display: none;
+  }
+  header .container ul li .mega-menu {
+    left: -218%;
+    width: 100%;
+  }
 }
 /* Header End */
