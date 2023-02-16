@@ -56,8 +56,9 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-bottom: 10px; */
   height: 60px;
+  position: relative;
+  box-shadow: 0 0 10px #ddd;
 }
 
 header .container > a {
@@ -75,24 +76,28 @@ header .container > ul {
 
 header .container > ul > li  {
   text-transform: capitalize;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .container > ul > li > a {
+  color: var(--BlackColor);
+  position: relative;
+  padding: 0 30px;
   font-size: 18px;
   height: 100%;
   display: flex;
   align-items: center;
-  /* overflow: hidden; */
-}
-
-/* header .container > ul > li > a {
-  color: var(--BlackColor);
-  padding: 30px;
   transition: var(--MainTransition);
   -webkit-transition: var(--MainTransition);
   -moz-transition: var(--MainTransition);
   -ms-transition: var(--MainTransition);
   -o-transition: var(--MainTransition);
-} */
+  overflow: hidden;
+}
 
-/* header .container > ul > li > a::before {
+header .container > ul > li > a::before {
   content: "";
   width: 100%;
   height: 5px;
@@ -105,27 +110,22 @@ header .container > ul > li  {
   -moz-transition: var(--MainTransition);
   -ms-transition: var(--MainTransition);
   -o-transition: var(--MainTransition);
-} */
+}
 
-/* header .container > ul > li > a:hover::before {
+header .container > ul > li > a:hover::before {
   left: 0;
-} */
+}
 
-/* header .container > ul > li > a:hover {
+header .container > ul > li > a:hover {
   background-color: var(--HoveringBackground);
   color: var(--MainColor);
-} */
+}
 
-/* header .container > ul > li:not(:last-child) {
-  position: relative;
-} */
-
-/* header .container .mega-menu {
+header .container .mega-menu {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  transform: translateX(-50%);
+  top: calc(100% + 50px);
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-bottom: 30px;
@@ -136,49 +136,46 @@ header .container > ul > li  {
   -moz-transition: var(--MainTransition);
   -ms-transition: var(--MainTransition);
   -o-transition: var(--MainTransition);
-} */
+}
 
-/* header .container .mega-menu img {
+header .container .mega-menu img {
   margin-right: 60px;
-} */
+}
 
-/* header .container .mega-menu ul:first-of-type {
-  margin-right: 30px;
-} */
+header .container .mega-menu ul:first-of-type {
+  margin-right: 60px;
+}
 
-/* header .container .mega-menu .col li {
+header .container .mega-menu .col li {
   color: var(--MainColor);
   border-bottom: 1px solid #e9e6e6;
   padding-top: 10px;
-  padding-right: 30px;
+  padding-right: 90px;
   padding-bottom: 10px;
   font-size: 18px;
-} */
+}
 
-/* header .container .mega-menu .col li i {
+header .container .mega-menu .col li i {
   margin-right: 10px;
-} */
+}
 
-/* header .container .mega-menu .col li a {
+header .container .mega-menu .col li a {
   color: var(--MainColor);
   text-transform: capitalize;
-} */
+}
 
-/* header .container > ul > li:last-child:hover + .mega-menu {
+header .container > ul > li:last-child:hover .mega-menu {
   opacity: 1;
-  top: 15%;
-}  */
+  top: calc(100% + 1px);
+} 
 
 /* Responsiveness Styling */
-/* @media (max-width: 992px) {
-  header .container ul li .mega-menu img {
+@media (max-width: 992px) {
+  header .container > ul > li .mega-menu img {
     display: none;
   }
-  header .container ul li .mega-menu {
-    left: -100%;
-  }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   header .container {
     flex-direction: column;
   }
