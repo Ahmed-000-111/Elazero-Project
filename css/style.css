@@ -209,6 +209,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 /* Landind Start */
 .landing {
   position: relative;
+  overflow: hidden;
   height: calc(100vh - 60px);
 }
 
@@ -216,12 +217,20 @@ header .container > ul > li:last-child:hover .mega-menu {
   content: "";
   position: absolute;
   background-color: #ececec;
-  top: -90px;
+  top: -99px;
   z-index: -1;
-  left: -63px;
-  width: calc(100% + 105px);
-  height: calc(100% - 47px);
-  transform: rotate(-9deg);
+  left: -40px;
+  width: calc(100% + 70px);
+  height: 100%;
+  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+}
+
+.landing .container {
+  position: relative;
 }
 
 .landing .container .content {
@@ -247,14 +256,40 @@ header .container > ul > li:last-child:hover .mega-menu {
   font-weight: normal;
 }
 
-.landing .container .content,
-.landing .container .arrows {
-  position: relative;
-}
-
 .landing .container .content img {
   width: 600px;
-  max-width: 100%;
   margin-left: 30px;
+  position: relative;
+  top: 30px;
+  animation-name: top-down;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes top-down {
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+.landing .container .arrows {
+  position: absolute;
+  left: 50%;
+  bottom: -130px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.landing .container .arrows i {
+  color: var(--MainAlterColor);
+  font-size: 30px;
+  font-weight: bold;
 }
 /* Landind End */
