@@ -70,6 +70,7 @@ header .container > a {
   text-transform: capitalize;
   color: var(--MainColor);
   height: 100%;
+  font-weight: bold;
 }
 
 header .container > ul {
@@ -89,7 +90,7 @@ header .container > ul > li > a {
   color: var(--BlackColor);
   position: relative;
   padding: 0 30px;
-  font-size: 18px;
+  font-size: 19px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -168,6 +169,7 @@ header .container .mega-menu .col li i {
 header .container .mega-menu .col li a {
   color: var(--MainColor);
   text-transform: capitalize;
+  font-weight: bold;
 }
 
 header .container > ul > li:last-child:hover .mega-menu {
@@ -285,11 +287,60 @@ header .container > ul > li:last-child:hover .mega-menu {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  animation-name: arrow-p-change;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.landing .container .arrows:hover {
+  animation-play-state: paused;
+}
+
+@keyframes arrow-p-change {
+  25% {
+    bottom: -110px;
+  }
+  50% {
+    bottom: -130px;
+  }
+  65% {
+    bottom: -110px;
+  }
+  80% {
+    bottom: -130px;
+  }
+  100% {
+    bottom: -130px;
+  }
 }
 
 .landing .container .arrows i {
   color: var(--MainAlterColor);
   font-size: 30px;
   font-weight: bold;
+}
+
+/* Responsiveness Styling */
+@media (max-width: 992px) {
+  .landing .container .content img {
+    display: none;
+  }
+  .landing .container {
+    top: 50%;
+    transform: translateY(-100%);
+  }
+  .landing .container .content article div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing .container .content article div h2 {
+    font-size: 28px;
+  }
+  .landing .container .content article div p {
+    font-size: 18px;
+  }
 }
 /* Landind End */
