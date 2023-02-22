@@ -51,6 +51,104 @@ a {
   text-decoration: none;
 }
 
+.main-title {
+  text-transform: uppercase;
+  color: black;
+  font-size: 30px;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto 80px;
+  position: relative;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+  
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--MainAlterColor);
+  z-index: -1;
+}
+
+.main-title::before {
+  left: -30px;
+}
+
+.main-title::after {
+  right: -30px;
+}
+
+.main-title:hover::before {
+  animation-name: outside-in-left;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes outside-in-left {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.main-title:hover::after {
+  animation-name: outside-in-right;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes outside-in-right {
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.main-title:hover {
+  color: white;
+  border-color: white;
+  transition-delay: 500ms;
+}
+
 /* Header Start */
 header {
   box-shadow: 0 0 10px #ddd;
