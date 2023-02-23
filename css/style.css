@@ -14,6 +14,7 @@
   --MainLineHeight: 1.5;
   --BlackColor: #333;
   --HoveringBackground: #fafafa;
+  --MainSectionPaddingTop: 100px;
 }
 
 /* Global Rules */
@@ -317,16 +318,17 @@ header .container > ul > li:last-child:hover .mega-menu {
   content: "";
   position: absolute;
   background-color: #ececec;
-  top: -99px;
+  top: 0;
   z-index: -1;
-  left: -40px;
-  width: calc(100% + 70px);
+  left: 0;
+  width: 100%;
   height: 100%;
-  transform: rotate(-7deg);
-  -webkit-transform: rotate(-7deg);
-  -moz-transform: rotate(-7deg);
-  -ms-transform: rotate(-7deg);
-  -o-transform: rotate(-7deg);
+  transform: skewY(-6deg);
+  transform-origin: top left;
+  -webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg);
 }
 
 .landing .container {
@@ -442,3 +444,56 @@ header .container > ul > li:last-child:hover .mega-menu {
   }
 }
 /* Landind End */
+/* Article Start */
+.article {
+  padding-top: var(--MainSectionPaddingTop);
+}
+
+.article .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.article .container .content article {
+  position: relative;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+}
+
+.article .container .content article img {
+  max-width: 100%;
+}
+
+.article .container .content article h3 {
+  text-transform: capitalize;
+}
+
+.article .container .content article > p {
+  color: #777;
+}
+
+.article .container .content article hr {
+  margin: 15px 0;
+  border:1px solid #e6e6e7;
+}
+
+.article .container .content article .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 15px;
+}
+
+.article .container .content article .footer p,
+.article .container .content article .footer i {
+  text-transform: capitalize;
+  color: var(--MainColor);
+  font-weight: bold;
+}
+/* Article End */
