@@ -457,6 +457,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 
 .article .container .content article {
   position: relative;
+  top: 0;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -464,6 +465,32 @@ header .container > ul > li:last-child:hover .mega-menu {
   -o-border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+
+.article .container .content article:hover {
+  top: -10px;
+}
+
+.article .container .content article:hover .footer i {
+  animation-name: move-right;
+  animation-duration: 700ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes move-right {
+  100% {
+    transform: translatex(10px);
+    -webkit-transform: translatex(10px);
+    -moz-transform: translatex(10px);
+    -ms-transform: translatex(10px);
+    -o-transform: translatex(10px);
+  }
 }
 
 .article .container .content article img {
