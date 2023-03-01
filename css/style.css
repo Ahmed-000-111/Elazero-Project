@@ -610,3 +610,24 @@ header .container > ul > li:last-child:hover .mega-menu {
   height: 100%;
 }
 /* Gallery End */
+/* Features Start */
+.features {
+  padding-top: var(--MainSectionPaddingTop);
+  padding-bottom: var(--MainSectionPaddingBottom);
+}
+
+.features .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.features .container .content article {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.features .container .content article .img img {
+  max-width: 100%;
+}
+/* Features End */
