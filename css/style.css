@@ -625,6 +625,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 .features .container .content article {
   border: 1px solid #ccc;
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .features .container .content article .img {
@@ -703,8 +704,65 @@ header .container > ul > li:last-child:hover .mega-menu {
 .features .container .content article a {
   font-weight: bold;
   text-transform: capitalize;
-  padding: 10px 35px;
-  border: 2px solid black;
+  padding: 7px 35px;
+  border: 2px solid;
+  border-radius: 8px;
   font-size: 20px;
+  position: relative;
+}
+
+
+
+.features .container .content article a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+  z-index: -1;
+}
+
+.features .container .content article:first-child a {
+  color: #f44036;
+  border-color: #f44036;
+  border: 2px solid #f44036;
+  border-radius: 8px;
+}
+
+
+
+.features .container .content article:first-child a:hover::before {
+  width: 100%;
+  background-color: #f44036;
+}
+
+.features .container .content article:nth-child(2) a {
+  color: #009688;
+  border-color: #009688;
+}
+
+.features .container .content article:nth-child(2) a:hover::before {
+  width: 100%;
+  background-color: #009688;
+}
+
+.features .container .content article:last-child a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+}
+
+.features .container .content article:last-child a:hover::before {
+  width: 100%;
+  background-color: #03a9f4;
+}
+
+.features .container .content article a:hover {
+  color: white;
 }
 /* Features End */
