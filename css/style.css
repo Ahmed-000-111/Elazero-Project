@@ -626,11 +626,43 @@ header .container > ul > li:last-child:hover .mega-menu {
   border: 1px solid #ccc;
   text-align: center;
   padding-bottom: 50px;
+  position: relative;
 }
 
 .features .container .content article .img {
   position: relative;
+  overflow: hidden;
 }
+
+.features .container .content article .img::after {
+  content: "";
+  position: absolute;
+  bottom: -132px;
+  left: 0px;
+  width: 110%;
+  height: 183px;
+  background-color: red;
+  transform: skewY(-20deg);
+  transform-origin: left center;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+  -webkit-transform: skewY(-20deg);
+  -moz-transform: skewY(-20deg);
+  -ms-transform: skewY(-20deg);
+  -o-transform: skewY(-20deg);
+}
+
+/* .features .container .content article:hover .img::after {
+  transform-origin: right center;
+  transform: skewY(20deg);
+  -webkit-transform: skewY(20deg);
+  -moz-transform: skewY(20deg);
+  -ms-transform: skewY(20deg);
+  -o-transform: skewY(20deg);
+} */
 
 .features .container .content article .img::before {
   content: "";
@@ -709,6 +741,7 @@ header .container > ul > li:last-child:hover .mega-menu {
   border-radius: 8px;
   font-size: 20px;
   position: relative;
+  
 }
 
 
@@ -737,7 +770,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 
 
 
-.features .container .content article:first-child a:hover::before {
+.features .container .content article:first-child:hover a::before {
   width: 100%;
   background-color: #f44036;
 }
@@ -747,7 +780,7 @@ header .container > ul > li:last-child:hover .mega-menu {
   border-color: #009688;
 }
 
-.features .container .content article:nth-child(2) a:hover::before {
+.features .container .content article:nth-child(2):hover a::before {
   width: 100%;
   background-color: #009688;
 }
@@ -757,12 +790,12 @@ header .container > ul > li:last-child:hover .mega-menu {
   border-color: #03a9f4;
 }
 
-.features .container .content article:last-child a:hover::before {
+.features .container .content article:last-child:hover a::before {
   width: 100%;
   background-color: #03a9f4;
 }
 
-.features .container .content article a:hover {
+.features .container .content article:hover a {
   color: white;
 }
 /* Features End */
