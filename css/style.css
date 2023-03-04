@@ -790,3 +790,37 @@ header .container > ul > li:last-child:hover .mega-menu {
   color: white;
 }
 /* Features End */
+/* Testimonials Start */
+.test {
+  margin-top: var(--SectionTopMargin);
+  padding-top: var(--MainSectionPaddingTop);
+  padding-bottom: var(--MainSectionPaddingBottom);
+  background-color: var(--SectionBackground);
+  position: relative;
+  z-index: 0;
+}
+
+.test .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.test .container .content article {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+}
+
+.test .container .content article .img img {
+  --test-dimensions: 90px;
+  width: var(--test-dimensions);
+  height: var(--test-dimensions);
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -15%;
+  right: -5%;
+  background-color: var(--SectionBackground);
+}
+/* Testimonials End */
