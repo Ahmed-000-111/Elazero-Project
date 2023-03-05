@@ -17,6 +17,7 @@
   --MainSectionPaddingTop: 100px;
   --MainSectionPaddingBottom: 100px;
   --SectionTopMargin: 100px;
+  --ParaColor: #777;
 }
 
 /* Global Rules */
@@ -810,6 +811,7 @@ header .container > ul > li:last-child:hover .mega-menu {
   position: relative;
   background-color: white;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .test .container .content article .img img {
@@ -822,5 +824,40 @@ header .container > ul > li:last-child:hover .mega-menu {
   top: -15%;
   right: -5%;
   background-color: var(--SectionBackground);
+}
+
+.test .container .content article h3 {
+  text-transform: capitalize;
+}
+
+.test .container .content article h4 {
+  text-transform: capitalize;
+  color: var(--ParaColor);
+}
+
+.test .container .content article:first-child .rate i:not(:last-child),
+.test .container .content article:nth-child(2) .rate i:not(:last-child),
+.test .container .content article:nth-child(3) .rate i:not(:last-child) {
+  color: gold;
+}
+
+.test .container .content article:nth-child(4) .rate i {
+  color: gold;
+}
+
+.test .container .content article:nth-child(5) .rate .fa-solid,
+.test .container .content article:last-child .rate .fa-solid {
+  color: gold;
+}
+
+.test .container .content article p {
+  color: var(--ParaColor);
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .test .container .content article .img img {
+    right: 0;
+  }
 }
 /* Testimonials End */
