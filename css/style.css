@@ -1088,10 +1088,39 @@ header .container > ul > li:last-child:hover .mega-menu {
   position: relative;
 }
 
-.our-skills .container .content article .info .html::before,
-.our-skills .container .content article .info .css::before,
-.our-skills .container .content article .info .javascript::before,
-.our-skills .container .content article .info .python::before {
+.our-skills .container .content article .info div::after {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  color: var(--MainColor);
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid var(--MainAlterColor);
+  padding: 0 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.our-skills .container .content article .info .html::after {
+  content: "80%";
+}
+
+.our-skills .container .content article .info .css::after {
+  content: "85%";
+}
+
+.our-skills .container .content article .info .javascript::after {
+  content: "70%";
+}
+
+.our-skills .container .content article .info .python::after {
+  content: "80%";
+}
+
+.our-skills .container .content article .info div::before {
   position: absolute;
   top: -45px;
   left: 0;
@@ -1118,47 +1147,28 @@ header .container > ul > li:last-child:hover .mega-menu {
 .our-skills .container .content article .info .python span {
   display: block;
   height: 100%;
-  width: 0;
   background-color: var(--MainColor);
-  animation-duration: 1000ms;
-  animation-delay: 500ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
 }
 
 .our-skills .container .content article .info .html span {
-  animation-name: fill-80-gauge;
-}
-@keyframes fill-80-gauge {
-  100% {
-    width: 80%;
-  }
+  width: 80%;
 }
 
 .our-skills .container .content article .info .css span {
-  animation-name: fill-85-gauge;
-}
-@keyframes fill-85-gauge {
-  100% {
-    width: 85%;
-  }
+  width: 85%;
 }
 
 .our-skills .container .content article .info .javascript span {
-  animation-name: fill-70-gauge;
-}
-@keyframes fill-70-gauge {
-  100% {
-    width: 70%;
-  }
+  width: 70%;
 }
 
 .our-skills .container .content article .info .python span {
-  animation-name: fill-80-gauge;
+  width: 80%;
 }
-@keyframes fill-80-gauge {
-  100% {
-    width: 80%;
+
+@media (max-width: 992px) {
+  .our-skills .container .content article img {
+    display: none;
   }
 }
 /* Our-Skills End */
