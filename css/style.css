@@ -1065,3 +1065,100 @@ header .container > ul > li:last-child:hover .mega-menu {
   color: var(--MainColor);
 }
 /* Services End */
+/* Our-Skills Start */
+.our-skills {
+  margin-top: var(--SectionTopMargin);
+}
+
+.our-skills .container .content article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-skills .container .content article .info {
+  width: 100%;
+}
+
+.our-skills .container .content article .info div {
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+  margin: 60px 0;
+  position: relative;
+}
+
+.our-skills .container .content article .info .html::before,
+.our-skills .container .content article .info .css::before,
+.our-skills .container .content article .info .javascript::before,
+.our-skills .container .content article .info .python::before {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.our-skills .container .content article .info .html::before {
+  content: "HTML";
+}
+.our-skills .container .content article .info .css::before {
+  content: "CSS";
+}
+.our-skills .container .content article .info .javascript::before {
+  content: "JavaScript";
+}
+.our-skills .container .content article .info .python::before {
+  content: "Python";
+}
+
+.our-skills .container .content article .info .html span,
+.our-skills .container .content article .info .css span,
+.our-skills .container .content article .info .javascript span,
+.our-skills .container .content article .info .python span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: var(--MainColor);
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.our-skills .container .content article .info .html span {
+  animation-name: fill-80-gauge;
+}
+@keyframes fill-80-gauge {
+  100% {
+    width: 80%;
+  }
+}
+
+.our-skills .container .content article .info .css span {
+  animation-name: fill-85-gauge;
+}
+@keyframes fill-85-gauge {
+  100% {
+    width: 85%;
+  }
+}
+
+.our-skills .container .content article .info .javascript span {
+  animation-name: fill-70-gauge;
+}
+@keyframes fill-70-gauge {
+  100% {
+    width: 70%;
+  }
+}
+
+.our-skills .container .content article .info .python span {
+  animation-name: fill-80-gauge;
+}
+@keyframes fill-80-gauge {
+  100% {
+    width: 80%;
+  }
+}
+/* Our-Skills End */

@@ -1,3 +1,8 @@
-Try to make the "mega-menu", a brother to the last "li"
+Try to make the "mega-menu" a brother to the last "li"
 
 Take care for how the Spikes are made.
+
+Counting Animation:
+
+https://css-tricks.com/animating-number-counters/#the-new-school-css-solution
+
