@@ -1306,24 +1306,53 @@ header .container > ul > li:last-child:hover .mega-menu {
   font-weight: bold;
   color: var(--MainColor);
   border: 1px solid #9b9595;
-  padding: 15px;
+  /* padding: 15px; */
   margin: 0 10px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
   position: relative;
+  text-align: center;
+  width: 70px;
 }
 
 .latest-events .container .content .news .counter div::after {
-  content: "Days";
   position: absolute;
   width: 100%;
   height: 20%;
   left: 50%;
-  bottom: 0;
-  font-size: 20px;
+  transform: translateX(-50%);
+  bottom: -28px;
+  font-size: 15px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border: 1px solid;
+  border-color: transparent #9b9595 #9b9595;
+  border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.latest-events .container .content .news .counter :first-child:after {
+  content: "Days";
+}
+.latest-events .container .content .news .counter :nth-child(2):after {
+  content: "Hours";
+}
+.latest-events .container .content .news .counter :nth-child(3):after {
+  content: "Minutes";
+}
+.latest-events .container .content .news .counter :last-child:after {
+  content: "Seconds";
 }
 
 .latest-events .container .content .news .announce {
