@@ -1284,6 +1284,25 @@ header .container > ul > li:last-child:hover .mega-menu {
   padding-bottom: var(--MainSectionPaddingBottom);
 }
 
+.latest-events .container {
+  position: relative;
+}
+
+.latest-events .container > img {
+  position: absolute;
+  z-index: -1;
+}
+
+.latest-events .container > img:first-of-type {
+  top: 100px;
+  right: 0;
+}
+
+.latest-events .container > img:last-of-type {
+  bottom: 100px;
+  left: 0;
+}
+
 .latest-events .container .content {
   display: flex;
   align-items: center;
@@ -1299,14 +1318,14 @@ header .container > ul > li:last-child:hover .mega-menu {
   align-items: center;
   width: fit-content;
   margin: 0 auto;
+  background-color: white;
 }
 
 .latest-events .container .content .news .counter div {
   font-size: 35px;
   font-weight: bold;
   color: var(--MainColor);
-  border: 1px solid #9b9595;
-  /* padding: 15px; */
+  border: 1px solid #e0d6d6;
   margin: 0 10px;
   border-radius: 10px 10px 0 0;
   -webkit-border-radius: 10px 10px 0 0;
@@ -1316,6 +1335,11 @@ header .container > ul > li:last-child:hover .mega-menu {
   position: relative;
   text-align: center;
   width: 70px;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
 }
 
 .latest-events .container .content .news .counter div::after {
@@ -1331,7 +1355,7 @@ header .container > ul > li:last-child:hover .mega-menu {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   border: 1px solid;
-  border-color: transparent #9b9595 #9b9595;
+  border-color: transparent #e0d6d6 #e0d6d6;
   border-radius: 0 0 10px 10px;
   -webkit-border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;
@@ -1341,6 +1365,11 @@ header .container > ul > li:last-child:hover .mega-menu {
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
 }
 .latest-events .container .content .news .counter :first-child:after {
   content: "Days";
@@ -1355,8 +1384,13 @@ header .container > ul > li:last-child:hover .mega-menu {
   content: "Seconds";
 }
 
+.latest-events .container .content .news .counter div:hover,
+.latest-events .container .content .news .counter div:hover::after {
+  border-color: var(--MainColor);
+}
+
 .latest-events .container .content .news .announce {
-  margin-top: 40px;
+  margin-top: 75px;
   text-align: center;
 }
 
@@ -1371,5 +1405,72 @@ header .container > ul > li:last-child:hover .mega-menu {
   font-size: 19px;
   line-height: 1.7;
   text-align: justify;
+}
+
+.latest-events .container form {
+  width: fit-content;
+  margin: 100px auto 0;
+  padding: 30px 40px;
+  background-color: #f6f5f5;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  max-width: 100%;
+}
+
+.latest-events .container form input[type="email"] {
+  padding: 20px;
+  width: 413px;
+  max-width: 100%;
+  margin-right: 15px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  outline: none;
+  border: none;
+}
+
+.latest-events .container form input[type="email"]::placeholder {
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.latest-events .container form input[type="submit"] {
+  padding: 20px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background-color: var(--MainColor);
+  color: white;
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: bold;
+  width: 143px;
+  max-width: 100%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Respovsiveness Styling */
+@media (max-width: 992px) {
+  .latest-events .container img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-events .container form {
+    text-align: center;
+  }
+  .latest-events .container form input[type="email"] {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
 }
 /* Latest-Events End */
