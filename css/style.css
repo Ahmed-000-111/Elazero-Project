@@ -1501,6 +1501,29 @@ header .container > ul > li:last-child:hover .mega-menu {
   padding: 20px 0 35px;
 }
 
+.pricing .container .content article:nth-child(2) {
+  transform: translateY(-22px);
+  -webkit-transform: translateY(-22px);
+  -moz-transform: translateY(-22px);
+  -ms-transform: translateY(-22px);
+  -o-transform: translateY(-22px);
+  position: relative;
+}
+
+.pricing .container .content article:nth-child(2) .pop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+
+.pricing .container .content article:nth-child(2) .pop div {
+  width: fit-content;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+
 .pricing .container .content article .header {
   text-align: center;
 }
@@ -1533,8 +1556,8 @@ header .container > ul > li:last-child:hover .mega-menu {
 .pricing .container .content article ul {
   margin: 20px 0 30px;
   width: 100%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #998f8f17;
+  border-bottom: 1px solid #998f8f17;;
 }
 
 .pricing .container .content article ul li {
@@ -1544,7 +1567,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 }
 
 .pricing .container .content article ul li:not(:last-of-type) {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #998f8f17;;
 }
 
 .pricing .container .content article ul li i {
