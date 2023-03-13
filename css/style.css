@@ -1886,3 +1886,106 @@ header .container > ul > li:last-child:hover .mega-menu {
   font-style: oblique;
 }
 /* Statis End */
+/* Discount Start */
+.disc .container .content {
+  display: flex;
+  align-items: center;
+}
+
+.disc .container .content .ann,
+.disc .container .content .info {
+  flex-basis: 50%;
+}
+
+.disc .container .content .ann {
+  position: relative;
+  background-image: url(../imgs/discount-background1.jpg);
+  padding: 50px ;
+  text-align: center;
+}
+.disc .container .content .ann::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainColor);
+  opacity: 0.97;
+}
+
+.disc .container .content .ann h2,
+.disc .container .content .ann p,
+.disc .container .content .ann img {
+  position: relative;
+}
+
+.disc .container .content .ann h2 {
+  text-transform: capitalize;
+  color: white;
+  font-size: 35px
+}
+
+.disc .container .content .ann p {
+  color: white;
+  line-height: 1.7;
+  font-size: 18px;
+  text-align: justify;
+  margin: 20px 0;
+}
+
+.disc .container .content .ann img {
+  width: 300px;
+}
+
+.disc .container .content .info {
+  padding: 50px ;
+  text-align: center;
+}
+
+.disc .container .content .info h2 {
+  font-size: 35px;
+  text-transform: capitalize;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.disc .container .content .info form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  width: 295px;
+}
+
+.disc .container .content .info form input:not(:last-child),
+.disc .container .content .info form textarea {
+  margin-bottom: 40px;
+  border: 1px solid;
+  border-color: transparent transparent rgb(224, 219, 219) transparent;
+  padding: 10px 20px;
+}
+.disc .container .content .info form input:not(:last-child)::placeholder,
+.disc .container .content .info form textarea::placeholder {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.disc .container .content .info form input,
+.disc .container .content .info form textarea {
+  outline: none;
+}
+
+.disc .container .content .info form textarea {
+  height: 200px;
+}
+
+.disc .container .content .info form input[type="submit"] {
+  text-transform: capitalize;
+  color: white;
+  background-color: var(--MainColor);
+  font-size: 20px;
+  border: none;
+  padding: 8px 0;
+  font-weight: bold;
+}
+/* Discount End */
