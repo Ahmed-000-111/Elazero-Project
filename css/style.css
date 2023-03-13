@@ -1889,7 +1889,6 @@ header .container > ul > li:last-child:hover .mega-menu {
 /* Discount Start */
 .disc .container .content {
   display: flex;
-  align-items: center;
 }
 
 .disc .container .content .ann,
@@ -1936,6 +1935,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 
 .disc .container .content .ann img {
   width: 300px;
+  max-width: 100%;
 }
 
 .disc .container .content .info {
@@ -1963,11 +1963,22 @@ header .container > ul > li:last-child:hover .mega-menu {
   border: 1px solid;
   border-color: transparent transparent rgb(224, 219, 219) transparent;
   padding: 10px 20px;
+  font-size: 17px;
+  caret-color: var(--MainColor);
 }
 .disc .container .content .info form input:not(:last-child)::placeholder,
 .disc .container .content .info form textarea::placeholder {
   text-transform: capitalize;
   font-size: 16px;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+.disc .container .content .info form input:not(:last-child):focus::placeholder,
+.disc .container .content .info form textarea:focus::placeholder {
+  color: transparent;
 }
 
 .disc .container .content .info form input,
@@ -1987,5 +1998,32 @@ header .container > ul > li:last-child:hover .mega-menu {
   border: none;
   padding: 8px 0;
   font-weight: bold;
+  cursor: pointer;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+.disc .container .content .info form input[type="submit"]:hover {
+  background-color: var(--MainAlterColor);
+}
+
+@media (max-width: 768px) {
+  .disc .container .content {
+    flex-direction: column;
+  }
+  .disc .container .content .ann {
+    padding: 50px 20px;
+  }
+  .disc .container .content .ann h2 {
+    font-size: 27px;
+  }
+  .disc .container .content .info {
+    padding: 50px 20px;
+  }
+  .disc .container .content .info h2 {
+    font-size: 27px;
+  }
 }
 /* Discount End */
