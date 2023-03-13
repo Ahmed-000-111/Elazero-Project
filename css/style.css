@@ -1810,7 +1810,50 @@ header .container > ul > li:last-child:hover .mega-menu {
   padding: 20px 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+.statis .container .content .cards .card::before,
+.statis .container .content .cards .card::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: var(--MainAlterColor);
+  height: 0;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+.statis .container .content .cards .card::before {
+  bottom: 0;
+  left: 0;
+}
+.statis .container .content .cards .card::after {
+  top: 0;
+  right: 0;
+}
+.statis .container .content .cards .card:hover::before,
+.statis .container .content .cards .card:hover::after {
+  height: 100%;
+}
+.statis .container .content .cards .card:hover i,
+.statis .container .content .cards .card:hover div:nth-child(2) {
+  color: black;
+}
+.statis .container .content .cards .card:hover div:last-child {
+  color: var(--MainAlterColor);
+}
+.statis .container .content .cards .card i,
+.statis .container .content .cards .card:hover div:nth-child(2),
+.statis .container .content .cards .card:hover div:last-child {
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+
 
 .statis .container .content .cards .card i {
   font-size: 30px;
