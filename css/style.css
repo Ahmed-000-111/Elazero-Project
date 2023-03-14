@@ -2037,7 +2037,7 @@ footer {
 footer .container .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 40px;
+  gap: 50px;
 }
 
 footer .container .content .one h1 {
@@ -2105,7 +2105,66 @@ footer .container .content .two a::before {
   color: var(--MainColor);
 }
 
+footer .container .content .three p {
+  color: #b9b9b9;
+  position: relative;
+  padding-left: 40px;
+}
+footer .container .content .three p:first-child::before {
+  content: "\f3c5";
+  font: var(--fa-font-solid);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: var(--MainColor);
+  font-size: 30px;
+}
+footer .container .content .three p:nth-child(2)::before {
+  content: "\f017";
+  font: var(--fa-font-solid);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: var(--MainColor);
+  font-size: 30px;
+}
+footer .container .content .three p:last-child::before {
+  content: "\f2a0";
+  font: var(--fa-font-solid);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: var(--MainColor);
+  font-size: 30px;
+}
+
+footer .container .content .three p:nth-child(2) {
+  margin: 30px 0;
+}
+
+footer .container .content .four {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 footer .container .content .four img {
   max-width: 100%;
+  flex-basis: calc(100% / 3);
 }
 /* Footer End */
