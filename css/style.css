@@ -2030,8 +2030,7 @@ header .container > ul > li:last-child:hover .mega-menu {
 /* Footer Start */
 footer {
   padding-top: var(--MainSectionPaddingTop);
-  padding-bottom: 50px;
-  background-color: var(--BlackColor);
+  background-color: #191919;
 }
 
 footer .container .content {
@@ -2053,12 +2052,26 @@ footer .container .content .one div {
 }
 
 footer .container .content .one div a {
-  background-color: #494646;
+  background-color: #313131;
   padding: 15px 0;
   margin-right: 10px;
   flex-basis: calc(100% / 5);
   display: flex;
   justify-content: center;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+footer .container .content .one div a:first-child:hover {
+  background-color: rgb(90, 149, 238);
+}
+footer .container .content .one div a:nth-child(2):hover {
+  background-color: rgb(40, 109, 212);
+}
+footer .container .content .one div a:last-child:hover {
+  background-color: rgb(177, 45, 52);
 }
 
 footer .container .content .one div a i {
@@ -2085,6 +2098,17 @@ footer .container .content .two a {
   font-size: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
+}
+footer .container .content .two a:hover {
+  padding-left: 35px;
+}
+footer .container .content .two a:hover::before {
+  padding-left: 10px;
 }
 
 footer .container .content .two a:not(:last-child) {
@@ -2103,6 +2127,11 @@ footer .container .content .two a::before {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   color: var(--MainColor);
+  transition: var(--MainTransition);
+  -webkit-transition: var(--MainTransition);
+  -moz-transition: var(--MainTransition);
+  -ms-transition: var(--MainTransition);
+  -o-transition: var(--MainTransition);
 }
 
 footer .container .content .three p {
@@ -2160,11 +2189,31 @@ footer .container .content .three p:nth-child(2) {
 footer .container .content .four {
   display: flex;
   flex-wrap: wrap;
-
+  align-items: center;
+  align-content: flex-start;
+  gap: 5px;
 }
 
 footer .container .content .four img {
-  max-width: 100%;
-  flex-basis: calc(100% / 3);
+  max-width: calc(100% / 3.19);
+  padding: 2px;
+  background-color: white;
+}
+
+footer > p {
+  color: white;
+  border-top: 1px solid #444;
+  padding: 25px 0;
+  margin: 50px 0 0;
+  text-align: center;
+} 
+
+@media (max-width: 768px) {
+  footer .container .content .one {
+    text-align: center;
+  }
+  footer .container .content .one div {
+    justify-content: center;
+  }
 }
 /* Footer End */
